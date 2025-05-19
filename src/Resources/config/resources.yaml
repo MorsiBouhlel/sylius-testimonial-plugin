@@ -10,5 +10,5 @@ sylius_resource:
 sylius_ui:
     events:
         sylius.admin.menu.main:
-            listeners:
+            blocks:
                 softylines_testimonial_admin_menu: '@softylines_sylius_testimonial_plugin.menu.admin.main'
