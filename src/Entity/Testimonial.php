@@ -46,16 +46,6 @@ class Testimonial implements ResourceInterface
      */
     private $avatarFile;
 
-    /**
-     * @ORM\Column(type="datetime_immutable")
-     */
-    private $createdAt;
-
-    /**
-     * @ORM\Column(type="datetime_immutable", nullable=true)
-     */
-    private $updatedAt;
-
     public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable();
