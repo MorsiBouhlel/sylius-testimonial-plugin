@@ -1,0 +1,18 @@
+softylines_sylius_testimonial:
+    menu:
+        content: Contenu
+        testimonials: Témoignages
+    ui:
+        testimonials: Témoignages
+        testimonial: Témoignage
+        manage_testimonials: Gérer les témoignages
+        new_testimonial: Nouveau témoignage
+        edit_testimonial: Modifier le témoignage
+        name: Nom
+        content: Contenu
+        avatar: Avatar
+        enabled: Activé
+        no_avatar: Pas d'avatar
+        no_testimonials: Aucun témoignage disponible pour le moment.
+        view_all_testimonials: Voir tous les témoignages
+        avatar_validation: L'image doit être au format JPG ou PNG et ne pas dépasser 2 Mo.

@@ -1,0 +1,2 @@
+parameters:
+    softylines_sylius_testimonial.model.testimonial.class: Softylines\SyliusTestimonialPlugin\Entity\Testimonial

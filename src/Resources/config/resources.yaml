@@ -1,0 +1,14 @@
+sylius_resource:
+    resources:
+        softylines_sylius_testimonial.testimonial:
+            driver: doctrine/orm
+            classes:
+                model: Softylines\SyliusTestimonialPlugin\Entity\Testimonial
+                repository: Softylines\SyliusTestimonialPlugin\Repository\TestimonialRepository
+                form: Softylines\SyliusTestimonialPlugin\Form\Type\TestimonialType
+                
+sylius_ui:
+    events:
+        sylius.admin.menu.main:
+            listeners:
+                softylines_testimonial_admin_menu: '@softylines_sylius_testimonial_plugin.menu.admin.main'

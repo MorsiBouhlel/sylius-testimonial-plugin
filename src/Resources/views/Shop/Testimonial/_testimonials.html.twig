@@ -1,0 +1,29 @@
+{% if testimonials|length > 0 %}
+    <div class="ui segment">
+        <h2 class="ui dividing header">{{ 'softylines_sylius_testimonial.ui.testimonials'|trans }}</h2>
+        
+        <div class="ui testimonials-slider">
+            {% for testimonial in testimonials %}
+                <div class="ui card">
+                    <div class="content">
+                        {% if testimonial.avatar %}
+                            <div class="right floated mini ui image">
+                                <img src="{{ asset('media/testimonial/avatar/' ~ testimonial.avatar) }}" alt="{{ testimonial.name }}">
+                            </div>
+                        {% endif %}
+                        <div class="header">{{ testimonial.name }}</div>
+                        <div class="description">
+                            <p>{{ testimonial.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+        <div class="ui basic center aligned segment">
+            <a href="{{ path('softylines_sylius_testimonial_shop_testimonial_index') }}" class="ui primary button">
+                {{ 'softylines_sylius_testimonial.ui.view_all_testimonials'|trans }}
+            </a>
+        </div>
+    </div>
+{% endif %}

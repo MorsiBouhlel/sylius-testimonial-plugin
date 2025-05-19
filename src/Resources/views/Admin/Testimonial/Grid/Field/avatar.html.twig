@@ -1,0 +1,5 @@
+{% if data.avatar %}
+    <img src="{{ asset('media/testimonial/avatar/' ~ data.avatar) }}" alt="{{ data.name }}" style="max-width: 50px; max-height: 50px;" />
+{% else %}
+    <span class="ui label">{{ 'softylines_sylius_testimonial.ui.no_avatar'|trans }}</span>
+{% endif %}

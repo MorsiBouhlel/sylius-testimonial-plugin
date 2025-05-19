@@ -1,0 +1,48 @@
+sylius_grid:
+    grids:
+        softylines_sylius_testimonial_admin_testimonial:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%softylines_sylius_testimonial.model.testimonial.class%"
+            sorting:
+                createdAt: desc
+            fields:
+                name:
+                    type: string
+                    label: softylines_sylius_testimonial.ui.name
+                    sortable: ~
+                avatar:
+                    type: twig
+                    label: softylines_sylius_testimonial.ui.avatar
+                    options:
+                        template: "@SoftylinesSyliusTestimonialPlugin/Admin/Testimonial/Grid/Field/avatar.html.twig"
+                enabled:
+                    type: twig
+                    label: sylius.ui.enabled
+                    options:
+                        template: "@SyliusUi/Grid/Field/enabled.html.twig"
+                createdAt:
+                    type: datetime
+                    label: sylius.ui.creation_date
+                    options:
+                        format: 'Y-m-d H:i:s'
+            filters:
+                name:
+                    type: string
+                    label: softylines_sylius_testimonial.ui.name
+                enabled:
+                    type: boolean
+                    label: sylius.ui.enabled
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+                bulk:
+                    delete:
+                        type: delete

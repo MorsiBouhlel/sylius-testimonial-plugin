@@ -1,0 +1,48 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block title %}{{ 'softylines_sylius_testimonial.ui.testimonials'|trans }} | {{ parent() }}{% endblock %}
+
+{% block content %}
+    <div class="ui breadcrumb">
+        <a href="{{ path('sylius_shop_homepage') }}" class="section">{{ 'sylius.ui.home'|trans }}</a>
+        <div class="divider"> / </div>
+        <div class="active section">{{ 'softylines_sylius_testimonial.ui.testimonials'|trans }}</div>
+    </div>
+
+    <div class="ui segment">
+        <h1 class="ui dividing header">{{ 'softylines_sylius_testimonial.ui.testimonials'|trans }}</h1>
+
+        {% if testimonials|length > 0 %}
+            <div class="ui relaxed divided items">
+                {% for testimonial in testimonials %}
+                    <div class="item">
+                        {% if testimonial.avatar %}
+                            <div class="ui small image">
+                                <img src="{{ asset('media/testimonial/avatar/' ~ testimonial.avatar) }}" alt="{{ testimonial.name }}">
+                            </div>
+                        {% endif %}
+                        <div class="content">
+                            <div class="header">{{ testimonial.name }}</div>
+                            <div class="description">
+                                <p>{{ testimonial.content }}</p>
+                            </div>
+                            <div class="extra">
+                                <div class="ui right floated">
+                                    {{ testimonial.createdAt|date('d/m/Y') }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="ui icon message">
+                <i class="info circular icon"></i>
+                <div class="content">
+                    <div class="header">{{ 'sylius.ui.info'|trans }}</div>
+                    <p>{{ 'softylines_sylius_testimonial.ui.no_testimonials'|trans }}</p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

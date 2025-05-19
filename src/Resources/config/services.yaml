@@ -1,0 +1,42 @@
+services:
+    softylines_sylius_testimonial_plugin.uploader.avatar:
+        class: Softylines\SyliusTestimonialPlugin\Uploader\AvatarUploader
+        arguments:
+            - "@gaufrette.filesystem.testimonial_avatar"
+            
+    softylines_sylius_testimonial_plugin.form.type.testimonial:
+        class: Softylines\SyliusTestimonialPlugin\Form\Type\TestimonialType
+        arguments:
+            - "%softylines_sylius_testimonial.model.testimonial.class%"
+            - ["sylius"]
+        tags:
+            - { name: form.type }
+            
+    softylines_sylius_testimonial_plugin.menu.admin.main:
+        class: Softylines\SyliusTestimonialPlugin\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+            
+    softylines_sylius_testimonial_plugin.listener.testimonial_avatar_upload:
+        class: Softylines\SyliusTestimonialPlugin\EventListener\TestimonialAvatarUploadListener
+        arguments:
+            - "@softylines_sylius_testimonial_plugin.uploader.avatar"
+        tags:
+            - { name: kernel.event_listener, event: softylines_sylius_testimonial.testimonial.pre_create, method: uploadAvatar }
+            - { name: kernel.event_listener, event: softylines_sylius_testimonial.testimonial.pre_update, method: uploadAvatar }
+
+    softylines_sylius_testimonial_plugin.controller.testimonial:
+        class: Softylines\SyliusTestimonialPlugin\Controller\TestimonialController
+        public: true
+        arguments:
+            - "@sylius.resource_controller.request_configuration_factory"
+            - "@sylius.resource_controller.view_handler"
+            - "@softylines_sylius_testimonial.repository.testimonial"
+            - "@softylines_sylius_testimonial.factory.testimonial"
+            - "@sylius.resource_controller.redirect_handler"
+            - "@sylius.resource_controller.flash_helper"
+            - "@sylius.resource_controller.authorization_checker"
+            - "@sylius.resource_controller.event_dispatcher"
+            - "@sylius.resource_controller.state_machine"
+            - "@sylius.resource_controller.resource_update_handler"
+            - "@sylius.resource_controller.resource_delete_handler"

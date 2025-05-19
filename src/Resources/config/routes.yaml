@@ -1,0 +1,9 @@
+softylines_sylius_testimonial_shop:
+    resource: "@SoftylinesSyliusTestimonialPlugin/Resources/config/routes/shop.yaml"
+    prefix: /{_locale}
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
+
+softylines_sylius_testimonial_admin:
+    resource: "@SoftylinesSyliusTestimonialPlugin/Resources/config/routes/admin.yaml"
+    prefix: /admin

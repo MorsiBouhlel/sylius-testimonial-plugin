@@ -1,0 +1,15 @@
+softylines_sylius_testimonial_shop_testimonial_index:
+    path: /testimonials
+    methods: [GET]
+    defaults:
+        _controller: softylines_sylius_testimonial.controller.testimonial:indexAction
+        _sylius:
+            template: "@SoftylinesSyliusTestimonialPlugin/Shop/Testimonial/index.html.twig"
+            repository:
+                method: findActiveTestimonials
+                
+softylines_sylius_testimonial_shop_partial_testimonials:
+    path: /partial/testimonials
+    methods: [GET]
+    defaults:
+        _controller: softylines_sylius_testimonial.controller.testimonial:renderTestimonialsAction
