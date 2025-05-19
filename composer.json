@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Acme\\SyliusTestimonialPlugin\\": "src/"
+            "Softylines\\SyliusTestimonialPlugin\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Acme\\SyliusTestimonialPlugin\\Tests\\": "tests/"
+            "Softylines\\SyliusTestimonialPlugin\\Tests\\": "tests/"
         }
     },
     "extra": {
