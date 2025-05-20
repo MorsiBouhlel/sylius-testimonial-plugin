@@ -1,0 +1,10 @@
+knp_gaufrette:
+    stream_wrapper: ~
+    adapters:
+        store_logo:
+            local:
+                directory: "%sylius_core.public_dir%/media/store-logo"
+                create: true
+    filesystems:
+        store_logo:
+            adapter: store_logo
