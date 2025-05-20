@@ -6,6 +6,7 @@ sylius_resource:
                 model: Softylines\SyliusTestimonialPlugin\Entity\Testimonial
                 repository: Softylines\SyliusTestimonialPlugin\Repository\TestimonialRepository
                 form: Softylines\SyliusTestimonialPlugin\Form\Type\TestimonialType
+            filesystem: avatar
                 
 sylius_ui:
     events:
