@@ -1,7 +1,7 @@
 services:
     softylines_sylius_testimonial_plugin.filesystem.avatar:
         class: Gaufrette\Filesystem
-        arguments: ['avatar']
+        arguments: ['testimonial_avatar']
         factory: ['@knp_gaufrette.filesystem_map', 'get']
 
     softylines_sylius_testimonial.uploader.avatar:
