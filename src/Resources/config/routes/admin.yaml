@@ -2,7 +2,7 @@ softylines_sylius_testimonial_admin_testimonial:
     resource: |
         alias: softylines_sylius_testimonial.testimonial
         section: admin
-        templates: SyliusAdminBundle:Crud
+        templates: @SyliusAdmin\\Crud
         redirect: update
         grid: softylines_sylius_testimonial_admin_testimonial
         vars:
