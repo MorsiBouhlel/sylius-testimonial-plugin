@@ -1,3 +1,6 @@
+imports:
+    - { resource: services/uploader.yaml }
+    
 services:
     softylines_sylius_testimonial_plugin.uploader.avatar:
         class: Softylines\SyliusTestimonialPlugin\Uploader\AvatarUploader

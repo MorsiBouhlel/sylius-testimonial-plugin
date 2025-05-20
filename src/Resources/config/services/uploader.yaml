@@ -1,13 +1,13 @@
 services:
-  softylines_sylius_testimonial.filesystem.store_logo:
+  softylines_sylius_testimonial.filesystem.avatar:
     class: Gaufrette\Filesystem
     arguments:
-      - 'store_logo'
+      - 'avatar'
     factory:
       - '@knp_gaufrette.filesystem_map'
       - 'get'
 
-  softylines_sylius_testimonial.uploader.store_logo:
+  softylines_sylius_testimonial.uploader.avatar:
     class: Softylines\SyliusTestimonialPlugin\Uploader\AvatarUploader
     arguments:
-      - '@softylines_sylius_testimonial.filesystem.store_logo'
+      - '@softylines_sylius_testimonial.filesystem.avatar'
