@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Softylines\SyliusTestimonialPlugin\Uploader;
 
+use Gaufrette\Filesystem as GaufretteFilesystem;
 use Gaufrette\FilesystemInterface;
 use Symfony\Component\HttpFoundation\File\File;
 use Webmozart\Assert\Assert;
 
 class AvatarUploader implements AvatarUploaderInterface
 {
-    private Filesystem $filesystem;
+    private FilesystemInterface $filesystem;
 
     public function __construct(FilesystemInterface $filesystem)
     {
