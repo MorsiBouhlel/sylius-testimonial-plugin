@@ -2,7 +2,7 @@ services:
     softylines_sylius_testimonial_plugin.uploader.avatar:
         class: Softylines\SyliusTestimonialPlugin\Uploader\AvatarUploader
         arguments:
-            - "@knp_gaufrette.filesystems.sylius_image"
+            - "@knp_gaufrette.filesystems.testimonial_avatar"
             
     softylines_sylius_testimonial_plugin.form.type.testimonial:
         class: Softylines\SyliusTestimonialPlugin\Form\Type\TestimonialType
