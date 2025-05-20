@@ -4,6 +4,6 @@ knp_gaufrette:
             local:
                 directory: "%kernel.project_dir%/public/media/testimonial/avatar"
                 create: true
-    filesystems:
+    filesystem:
         testimonial_avatar:
             adapter: testimonial_avatar
