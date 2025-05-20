@@ -1,5 +1,5 @@
 services:
-  softylines_sylius_testimonial.filesystem.avatar:
+  softylines_sylius_testimonial_plugin.filesystem.avatar:
     class: Gaufrette\Filesystem
     arguments:
       - 'avatar'

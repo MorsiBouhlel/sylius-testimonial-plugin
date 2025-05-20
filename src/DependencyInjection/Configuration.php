@@ -11,7 +11,7 @@ final class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('symfony_sylius_testimonial_plugin');
+        $treeBuilder = new TreeBuilder('softylines_sylius_testimonial_plugin');
         $rootNode = $treeBuilder->getRootNode();
 
         return $treeBuilder;
