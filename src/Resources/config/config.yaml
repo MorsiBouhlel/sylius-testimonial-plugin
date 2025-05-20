@@ -4,15 +4,14 @@ imports:
 
 
 knp_gaufrette:
-    stream_wrapper: ~
-    adapters:
-        avatar:
-            local:
-                directory: "%sylius_core.public_dir%/media/avatar"
-                create: true
-    filesystems:
-        avatar:
-            adapter: avatar
+  adapters:
+    avatar:
+      local:
+        directory: "%sylius_core.public_dir%/media/avatar"
+        create: true
+  filesystems:
+    avatar:
+      adapter: avatar
 
 liip_imagine:
     loaders:
