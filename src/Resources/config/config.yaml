@@ -2,24 +2,23 @@ imports:
     - { resource: resources.yaml }
     - { resource: grids.yaml }
 
-
 knp_gaufrette:
-  adapters:
-    avatar:
-      local:
-        directory: "%sylius_core.public_dir%/media/avatar"
-        create: true
-  filesystems:
-    avatar:
-      adapter: avatar
+    adapters:
+        testimonial_avatar:
+            local:
+                directory: "%sylius_core.public_dir%/media/testimonial/avatar"
+                create: true
+    filesystems:
+        testimonial_avatar:
+            adapter: testimonial_avatar
 
 liip_imagine:
     loaders:
-        avatar:
+        testimonial_avatar:
             filesystem:
-                data_root: "%kernel.project_dir%/public/media/avatar"
+                data_root: "%kernel.project_dir%/public/media/testimonial/avatar"
     filter_sets:
         softylines_sylius_testimonial_plugin_avatar:
-            data_loader: avatar
+            data_loader: testimonial_avatar
             filters:
                 thumbnail: { size: [300, 300], mode: outbound }
