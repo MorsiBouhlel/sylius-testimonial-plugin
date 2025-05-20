@@ -15,6 +15,7 @@ sylius_grid:
                 avatar:
                     type: twig
                     label: softylines_sylius_testimonial.ui.avatar
+                    path: avatar
                     options:
                         template: "@SoftylinesSyliusTestimonialPlugin/Admin/Testimonial/Grid/Field/avatar.html.twig"
                 enabled:
