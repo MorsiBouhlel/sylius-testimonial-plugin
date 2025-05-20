@@ -1,11 +1,11 @@
 imports:
     - { resource: services/uploader.yaml }
-    
+
 services:
     softylines_sylius_testimonial_plugin.uploader.avatar:
         class: Softylines\SyliusTestimonialPlugin\Uploader\AvatarUploader
         arguments:
-            - "@softylines_sylius_testimonial_plugin.filesystem.store_logo"
+            - "@softylines_sylius_testimonial_plugin.filesystem.avatar"
             
     softylines_sylius_testimonial_plugin.form.type.testimonial:
         class: Softylines\SyliusTestimonialPlugin\Form\Type\TestimonialType
