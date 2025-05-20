@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Softylines\SyliusTestimonialPlugin\Uploader;
 
-use Gaufrette\Filesystem;
+use Gaufrette\FilesystemInterface;
 use Symfony\Component\HttpFoundation\File\File;
 use Webmozart\Assert\Assert;
 
@@ -12,7 +12,7 @@ class AvatarUploader implements AvatarUploaderInterface
 {
     private Filesystem $filesystem;
 
-    public function __construct(Filesystem $filesystem)
+    public function __construct(FilesystemInterface $filesystem)
     {
         $this->filesystem = $filesystem;
     }
