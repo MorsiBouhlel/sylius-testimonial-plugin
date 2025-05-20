@@ -10,4 +10,4 @@ services:
   softylines_sylius_testimonial.uploader.avatar:
     class: Softylines\SyliusTestimonialPlugin\Uploader\AvatarUploader
     arguments:
-      - '@softylines_sylius_testimonial.filesystem.avatar'
+      - '@softylines_sylius_testimonial_plugin.filesystem.avatar'
