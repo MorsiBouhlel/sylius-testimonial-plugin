@@ -1,0 +1,20 @@
+{{ form_errors(form) }}
+
+<div class="ui segment">
+    <h4 class="ui dividing header">{{ 'sylius.ui.details'|trans }}</h4>
+    {{ form_row(form.name) }}
+    {{ form_row(form.content) }}
+    {{ form_row(form.enabled) }}
+
+    {# Avatar Preview and File Upload #}
+    {% if form.vars.data.avatar is not null and form.vars.data.avatar is not empty %}
+        <div class="field">
+            <label>{{ 'softylines_sylius_testimonial.ui.current_avatar'|trans }}</label>
+            <img src="{{ asset('media/testimonial/avatar/' ~ form.vars.data.avatar) }}" alt="{{ 'softylines_sylius_testimonial.ui.avatar'|trans }}" style="max-width: 150px; max-height: 150px; margin-bottom: 10px;" />
+        </div>
+    {% endif %}
+    {{ form_row(form.avatarFile) }}
+</div>
+
+{# Add any other sections or fields if necessary, like translations if supported #}
+{# {{ form_rest(form) }} #}
