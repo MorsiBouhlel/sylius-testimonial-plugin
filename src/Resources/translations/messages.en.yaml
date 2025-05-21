@@ -16,3 +16,4 @@ softylines_sylius_testimonial:
         no_testimonials: No testimonials available at the moment.
         view_all_testimonials: View all testimonials
         avatar_validation: Image must be JPG or PNG format and not exceed 2MB.
+        current_avatar: Current Avatar

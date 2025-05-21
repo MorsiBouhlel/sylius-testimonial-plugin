@@ -6,6 +6,8 @@ sylius_resource:
                 model: Softylines\SyliusTestimonialPlugin\Entity\Testimonial
                 repository: Softylines\SyliusTestimonialPlugin\Repository\TestimonialRepository
                 form: Softylines\SyliusTestimonialPlugin\Form\Type\TestimonialType
+            templates:
+                _form: "@SoftylinesSyliusTestimonialPlugin/Admin/Testimonial/_form.html.twig"
                 
 sylius_ui:
     events:
